@@ -34,6 +34,10 @@ public class MineSweeper {
                 System.out.print("Enter row and column (e.g., 1 2): ");
                 row = scanner.nextInt();
                 col = scanner.nextInt();
+
+                if (row < 0 || row >= rows || col < 0 || col >= cols) {
+                    System.out.println("Invalid input. Please enter valid row and column numbers.");
+                }
             } while (row < 0 || row >= rows || col < 0 || col >= cols);
 
             if (board[row][col] == '*') {
